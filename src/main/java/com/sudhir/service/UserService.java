@@ -2,6 +2,7 @@ package com.sudhir.service;
 
 import java.util.Collection;
 
+import javax.ws.rs.BeanParam;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -16,7 +17,6 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import com.sudhir.model.User;
-import com.sun.jersey.api.core.InjectParam;
 
 @Path("/users")
 public class UserService {
@@ -30,7 +30,7 @@ public class UserService {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Collection<User> getUsers(@InjectParam SearchCeriteria sc) {
+	public Collection<User> getUsers(@BeanParam SearchCeriteria sc) {
 		return userDao.getAllUsers(sc);
 	}
 	

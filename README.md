@@ -16,5 +16,3 @@
 			<param-value>true</param-value>
 		</init-param>
 ## Declare the Service as rest using @Path
-
-# RESTwsExample

@@ -4,7 +4,6 @@ import java.util.Date;
 
 import javax.annotation.security.PermitAll;
 import javax.ws.rs.Consumes;
-import javax.ws.rs.FormParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -27,13 +26,13 @@ public class AuthenticationService {
 	
 	@POST
 	@Produces("application/json")
-	@Consumes("application/x-www-form-urlencoded")
-	public Response authenticateUser(@FormParam("username") String username,
-			@FormParam("password") String password) {
+	@Consumes("application/json")
+	public Response authenticateUser(User user) {
 		try {
+			System.out.println("@@@@User " + user.getUsername()+ " @@@@@@@@Password" + user.getPassword());
 
-			authenticate(username, password);
-			String token = issueToken(username,password);
+			authenticate(user.getUsername(), user.getPassword());
+			String token = issueToken(user.getUsername(),user.getPassword());
 			return Response.ok(token).build();
 
 		} catch (Exception e) {

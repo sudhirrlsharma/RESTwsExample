@@ -1,0 +1,26 @@
+curl -X PUT -d @data.json http://172.25.54.24:8080/RESTwsExample/rest/users/ -H "Content-Type: application/json"
+
+curl -X POST -d @data.json http://172.25.54.24:8080/RESTwsExample/rest/users/ -H "Content-Type: application/json"
+
+curl -i -X GET http://172.25.54.24:8080/RESTwsExample/rest/users/ -H "Content-Type: application/json"
+
+curl -X DELETE http://172.25.54.24:8080/RESTwsExample/rest/users/Amit -H "Content-Type: application/json"
+
+curl -i -X HEAD http://172.25.54.24:8080/RESTwsExample/rest/users -H "Content-Type: application/json"
+
+curl -i -X OPTIONS http://172.25.54.24:8080/RESTwsExample/rest/users -H "Content-Type: application/json"
+
+
+
+
+http://localhost:8080/RESTwsExample/rest/users?sortOrder=DESC&limit=100
+
+
+java -jar selenium.jar 
+
+
+java -jar selenium.jar  --hub =  http://localhost:8080
+
+java -jar selenium.jar  --hub =  http://localhost:8080
+java -jar selenium.jar  --hub =  http://localhost:8080
+java -jar selenium.jar  --hub =  http://localhost:8080

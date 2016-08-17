@@ -36,6 +36,7 @@ public class AuthenticationService {
 			return Response.ok(token).build();
 
 		} catch (Exception e) {
+			System.out.println(e);
 			return Response.status(Response.Status.UNAUTHORIZED).build();
 		}
 	}
@@ -54,6 +55,7 @@ public class AuthenticationService {
 
 	private String issueToken(String username, String password) {
 		String plainToken = new StringBuilder(username).append("|").append(password).append("|").append(new Date()).toString();
+		System.out.println("######## Token " + plainToken);
 		return new String(Base64.encode(plainToken.getBytes()));
 		
 	}

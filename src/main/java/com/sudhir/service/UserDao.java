@@ -14,7 +14,7 @@ public class UserDao {
 	
 	private  UserDao(){
 		System.out.println("Initializing the users");
-		usersMap.put("Sudhirsh", createUsers("Sudhirsh", "sharma"));
+		usersMap.put("SudhirSh", createUsers("Sudhirsh", "sharma"));
 		usersMap.put("jwalin", createUsers("jwalin", "shah"));
 	}
 	

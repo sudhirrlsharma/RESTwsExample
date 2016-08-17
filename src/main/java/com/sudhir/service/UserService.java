@@ -2,9 +2,11 @@ package com.sudhir.service;
 
 import java.util.Collection;
 
+import javax.annotation.security.PermitAll;
 import javax.ws.rs.BeanParam;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
+import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
 import javax.ws.rs.HEAD;
 import javax.ws.rs.OPTIONS;
@@ -30,7 +32,7 @@ public class UserService {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Collection<User> getUsers(@BeanParam SearchCeriteria sc) {
+	public Collection<User> getUsers(@BeanParam SearchCeriteria sc ) {
 		return userDao.getAllUsers(sc);
 	}
 	
@@ -38,7 +40,7 @@ public class UserService {
 	@Path("/{userName}")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public User getUserById(@PathParam("userName") String userName) {
+	public User getUserById( @PathParam("userName") String userName ) {
 		return userDao.getUserByUserName(userName);
 	}
 

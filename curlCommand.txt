@@ -11,11 +11,14 @@ curl -i -X HEAD http://172.25.54.24:8080/RESTwsExample/rest/users -H "Content-Ty
 curl -i -X POST -d  "username=value1&param2=value2" http://172.25.54.24:8080/RESTwsExample/rest/users -H "Content-Type: application/json"
 
 
-curl -v -i -X POST -d @data.json http://172.25.54.24:8080/RESTwsExample/rest/authentication -H "Content-Type: application/json"
+curl  -i -X POST -d @auth.json http://172.25.54.24:8080/RESTwsExample/rest/authentication -H "Content-Type: application/json"
 
 
 
 http://localhost:8080/RESTwsExample/rest/users?sortOrder=DESC&limit=100
 
 
+
+
+Authorization = U3VkaGlyU2h8c2hhcm1hfFR1ZSBBdWcgMTYgMjA6MzQ6MzIgSVNUIDIwMTY=
 
